@@ -25,7 +25,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 	   OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
 
 	   OneSignal.initWithLaunchOptions(launchOptions)
-	   OneSignal.setAppId("YOUR_ONESIGNAL_APP_ID")
+	   OneSignal.setAppId("86b10622-4102-42b2-ab95-a0f82167cf3b")
 
 	   OneSignal.promptForPushNotifications(userResponse: { accepted in
 		 print("User accepted notification: \(accepted)")
