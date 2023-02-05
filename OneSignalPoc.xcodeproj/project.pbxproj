@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C01C771298EE13500CC4D3A /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01C770298EE13500CC4D3A /* NotificationModel.swift */; };
 		3C01C773298EE14300CC4D3A /* SendPushNotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01C772298EE14300CC4D3A /* SendPushNotificationViewModel.swift */; };
-		3C01C775298FA23F00CC4D3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01C774298FA23F00CC4D3A /* Constants.swift */; };
+		3C01C777298FA50000CC4D3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01C776298FA50000CC4D3A /* Constants.swift */; };
 		3C951DC3298D84AA003C41FE /* OneSignalPocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C951DC2298D84AA003C41FE /* OneSignalPocApp.swift */; };
 		3C951DC5298D84AA003C41FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C951DC4298D84AA003C41FE /* ContentView.swift */; };
 		3C951DC7298D84AB003C41FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C951DC6298D84AB003C41FE /* Assets.xcassets */; };
@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		3C01C770298EE13500CC4D3A /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		3C01C772298EE14300CC4D3A /* SendPushNotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPushNotificationViewModel.swift; sourceTree = "<group>"; };
-		3C01C774298FA23F00CC4D3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3C01C776298FA50000CC4D3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3C951DBF298D84AA003C41FE /* OneSignalPoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneSignalPoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C951DC2298D84AA003C41FE /* OneSignalPocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignalPocApp.swift; sourceTree = "<group>"; };
 		3C951DC4298D84AA003C41FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 				3C951DC4298D84AA003C41FE /* ContentView.swift */,
 				3C01C772298EE14300CC4D3A /* SendPushNotificationViewModel.swift */,
 				3C01C770298EE13500CC4D3A /* NotificationModel.swift */,
-				3C01C774298FA23F00CC4D3A /* Constants.swift */,
+				3C01C776298FA50000CC4D3A /* Constants.swift */,
 				3C951DC6298D84AB003C41FE /* Assets.xcassets */,
 				3C951DC8298D84AB003C41FE /* Preview Content */,
 			);
@@ -239,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C01C775298FA23F00CC4D3A /* Constants.swift in Sources */,
+				3C01C777298FA50000CC4D3A /* Constants.swift in Sources */,
 				3C01C771298EE13500CC4D3A /* NotificationModel.swift in Sources */,
 				3C951DC5298D84AA003C41FE /* ContentView.swift in Sources */,
 				3C951DC3298D84AA003C41FE /* OneSignalPocApp.swift in Sources */,
