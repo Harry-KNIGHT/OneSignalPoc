@@ -11,11 +11,11 @@ import OneSignal
 @main
 struct OneSignalPocApp: App {
 	@UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-
+	@StateObject var notificationVM = SendPushNotificationViewModel()
 	var body: some Scene {
 		WindowGroup {
 			ContentView()
-				.environmentObject(SendPushNotificationViewModel())
+				.environmentObject(notificationVM)
 		}
 	}
 }

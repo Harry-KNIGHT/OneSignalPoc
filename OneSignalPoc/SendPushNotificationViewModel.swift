@@ -12,7 +12,7 @@ class SendPushNotificationViewModel: ObservableObject {
 
 	private let oneSignalUrl = URL(string: "https://onesignal.com/api/v1/notifications")
 
-	func sendNotification() {
+	func sendNotification(_ title: String,_ message: String,_ deeplinkUrl: String) {
 		guard let url = oneSignalUrl else { return }
 
 		var request = URLRequest(url: url)
@@ -24,9 +24,9 @@ class SendPushNotificationViewModel: ObservableObject {
 		let notification = Notification(
 			includedSegments: ["Subscribed Users"],
 			appID: oneSignalAppId,
-			title: Contents(en: "First post done"),
-			text: Contents(en:"Notification send from my app"),
-			urlDeeplink: "https://bokitfinder.fr"
+			title: Contents(en: title),
+			text: Contents(en: message),
+			urlDeeplink: deeplinkUrl
 		)
 
 		let jsonEncoder = JSONEncoder()
