@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct NotificationView: View {
-	@Binding var title: String
-	@Binding var subTitle: String
-	@Binding var message: String
+	let notification: Notification
 
     var body: some View {
 		HStack {
@@ -20,15 +18,11 @@ struct NotificationView: View {
 				.foregroundColor(.orange)
 
 			VStack(alignment: .leading, spacing: 10) {
-				Text(title.isEmpty ? "Titre de notification" : title)
+				Text(notification.title.en)
 					.font(.title3)
 					.fontWeight(.medium)
 
-				if !subTitle.isEmpty {
-					Text(subTitle)
-				}
-
-				Text(message.isEmpty ? "Nous avons concocté une soirée spéciale avec des guests, Axel Tony et un danseur reconnu mondialement de Kizomba !" : message)
+				Text(notification.text.en)
 					.multilineTextAlignment(.leading)
 			}
 			Spacer()
@@ -44,6 +38,6 @@ struct NotificationView: View {
 
 struct NotificationView_Previews: PreviewProvider {
     static var previews: some View {
-		NotificationView(title: .constant("Soirée Kizomba"), subTitle: .constant(""), message: .constant(""))
+		NotificationView(notification: .notification)
     }
 }

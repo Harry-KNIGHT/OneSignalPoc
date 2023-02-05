@@ -38,7 +38,6 @@ struct ContentView: View {
 			}
 			SendNotificationButton(title: $title, message: $message, url: $url)
 			.navigationTitle("Envoi notification")
-
 		}
 	}
 }
