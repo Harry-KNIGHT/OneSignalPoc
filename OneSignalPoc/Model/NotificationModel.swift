@@ -28,14 +28,3 @@ struct Notification: Codable {
 struct Contents: Codable {
 	let en: String
 }
-
-
-extension Notification {
-	public static let notification = Notification(
-		includedSegments: ["Subscribed Users"],
-		appID: oneSignalAppId,
-		title: Contents(en: "Notification Title"),
-		message: Contents(en: "This is a message about our super app feature"),
-		urlDeeplink: "http://bokitfinder.fr"
-	)
-}
