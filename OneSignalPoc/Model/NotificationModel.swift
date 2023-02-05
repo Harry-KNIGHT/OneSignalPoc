@@ -12,14 +12,14 @@ import Foundation
 struct Notification: Codable {
 	let includedSegments: [String]
 	let appID: String
-	let title, text: Contents
+	let title, message: Contents
 	let urlDeeplink: String
 
 	enum CodingKeys: String, CodingKey {
 		case includedSegments = "included_segments"
 		case appID = "app_id"
 		case title = "headings"
-		case text = "contents"
+		case message = "contents"
 		case urlDeeplink = "url"
 	}
 }
@@ -35,7 +35,7 @@ extension Notification {
 		includedSegments: ["Subscribed Users"],
 		appID: oneSignalAppId,
 		title: Contents(en: "Notification Title"),
-		text: Contents(en: "This is a message about our super app feature"),
+		message: Contents(en: "This is a message about our super app feature"),
 		urlDeeplink: "http://bokitfinder.fr"
 	)
 }

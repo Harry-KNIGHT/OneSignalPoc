@@ -25,7 +25,7 @@ class SendPushNotificationViewModel: ObservableObject {
 			includedSegments: ["Subscribed Users"],
 			appID: oneSignalAppId,
 			title: Contents(en: title),
-			text: Contents(en: message),
+			message: Contents(en: message),
 			urlDeeplink: deeplinkUrl
 		)
 

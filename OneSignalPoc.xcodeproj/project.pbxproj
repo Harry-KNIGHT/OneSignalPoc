@@ -117,6 +117,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		3C1A6ECB29904F6F0079CD0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C01C770298EE13500CC4D3A /* NotificationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3C951DB6298D84AA003C41FE = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +150,7 @@
 				3C951DE7298D9C61003C41FE /* OneSignalPoc.entitlements */,
 				3C951DC2298D84AA003C41FE /* OneSignalPocApp.swift */,
 				3C01C77A298FC14800CC4D3A /* Views */,
-				3C01C770298EE13500CC4D3A /* NotificationModel.swift */,
+				3C1A6ECB29904F6F0079CD0C /* Model */,
 				3C1A6ECA299045130079CD0C /* ViewModels */,
 				3C01C776298FA50000CC4D3A /* Constants.swift */,
 				3C951DC6298D84AB003C41FE /* Assets.xcassets */,
