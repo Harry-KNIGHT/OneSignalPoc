@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 	@EnvironmentObject var notifVM: SendPushNotificationViewModel
+	@EnvironmentObject var rulesVM: NotificationRulesViewModel
 	@State private var title: String = ""
 	@State private var subTitle: String = ""
 	@State private var message: String = ""
@@ -36,6 +37,7 @@ struct ContentView: View {
 				if hasURL {
 					TextField("Https://bokitfinder.fr", text: $url, axis: .vertical)
 				}
+
 				Section {
 					SendNotificationButton(
 						title: $title,
@@ -43,6 +45,7 @@ struct ContentView: View {
 						url: $url,
 						showAlert: $showAlertView
 					)
+					.disabled(rulesVM.isNotificationCanBeSend(title, message))
 				}
 			}
 			.navigationTitle("Envoi notification")
@@ -54,5 +57,6 @@ struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		ContentView()
 			.environmentObject(SendPushNotificationViewModel())
+			.environmentObject(NotificationRulesViewModel())
 	}
 }
