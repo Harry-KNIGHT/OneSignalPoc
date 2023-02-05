@@ -10,9 +10,7 @@
 		3C01C771298EE13500CC4D3A /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01C770298EE13500CC4D3A /* NotificationModel.swift */; };
 		3C01C773298EE14300CC4D3A /* SendPushNotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01C772298EE14300CC4D3A /* SendPushNotificationViewModel.swift */; };
 		3C01C777298FA50000CC4D3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01C776298FA50000CC4D3A /* Constants.swift */; };
-		3C01C779298FC06300CC4D3A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01C778298FC06300CC4D3A /* NotificationView.swift */; };
 		3C01C77E298FC1A000CC4D3A /* SendNotificationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01C77D298FC1A000CC4D3A /* SendNotificationButton.swift */; };
-		3C1A6EC7298FC6E80079CD0C /* NotificationRecapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A6EC6298FC6E80079CD0C /* NotificationRecapView.swift */; };
 		3C951DC3298D84AA003C41FE /* OneSignalPocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C951DC2298D84AA003C41FE /* OneSignalPocApp.swift */; };
 		3C951DC5298D84AA003C41FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C951DC4298D84AA003C41FE /* ContentView.swift */; };
 		3C951DC7298D84AB003C41FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C951DC6298D84AB003C41FE /* Assets.xcassets */; };
@@ -50,9 +48,7 @@
 		3C01C770298EE13500CC4D3A /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		3C01C772298EE14300CC4D3A /* SendPushNotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPushNotificationViewModel.swift; sourceTree = "<group>"; };
 		3C01C776298FA50000CC4D3A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		3C01C778298FC06300CC4D3A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		3C01C77D298FC1A000CC4D3A /* SendNotificationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendNotificationButton.swift; sourceTree = "<group>"; };
-		3C1A6EC6298FC6E80079CD0C /* NotificationRecapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRecapView.swift; sourceTree = "<group>"; };
 		3C951DBF298D84AA003C41FE /* OneSignalPoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneSignalPoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C951DC2298D84AA003C41FE /* OneSignalPocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignalPocApp.swift; sourceTree = "<group>"; };
 		3C951DC4298D84AA003C41FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				3C951DC4298D84AA003C41FE /* ContentView.swift */,
-				3C1A6EC6298FC6E80079CD0C /* NotificationRecapView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -107,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				3C01C77D298FC1A000CC4D3A /* SendNotificationButton.swift */,
-				3C01C778298FC06300CC4D3A /* NotificationView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -275,10 +269,8 @@
 				3C01C777298FA50000CC4D3A /* Constants.swift in Sources */,
 				3C01C771298EE13500CC4D3A /* NotificationModel.swift in Sources */,
 				3C951DC5298D84AA003C41FE /* ContentView.swift in Sources */,
-				3C1A6EC7298FC6E80079CD0C /* NotificationRecapView.swift in Sources */,
 				3C951DC3298D84AA003C41FE /* OneSignalPocApp.swift in Sources */,
 				3C01C773298EE14300CC4D3A /* SendPushNotificationViewModel.swift in Sources */,
-				3C01C779298FC06300CC4D3A /* NotificationView.swift in Sources */,
 				3C01C77E298FC1A000CC4D3A /* SendNotificationButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

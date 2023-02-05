@@ -15,43 +15,35 @@ struct ContentView: View {
 	@State private var url: String = ""
 	@State private var hasURL: Bool = false
 	@State private var hasSubTitle = false
-	@State private var showSendNotificationSheetView: Bool = false
+	@State private var showAlertView: Bool = false
 	var body: some View {
 		NavigationStack {
 			List {
 				Section {
-					TextField("Titre", text: $title)
+					TextField("Titre", text: $title, axis: .vertical)
 					Toggle("Sous titre", isOn: $hasSubTitle.animation())
 					if hasSubTitle {
-						TextField("Sous titre", text: $subTitle)
+						TextField("Sous titre", text: $subTitle, axis: .vertical)
 					}
 				}
 
 				Section {
-					TextField("Message", text: $message)
+					TextField("Message", text: $message, axis: .vertical)
 				}
 
 				Toggle("Ajout url", isOn: $hasURL.animation())
 
 				if hasURL {
-					TextField("Https://bokitfinder.fr", text: $url)
+					TextField("Https://bokitfinder.fr", text: $url, axis: .vertical)
 				}
 				Section {
-					Button("Voir la notification") {
-						self.showSendNotificationSheetView = true
-					}
-				}
-			}
-			.sheet(isPresented: $showSendNotificationSheetView) {
-				NotificationRecapView(
-					notification: Notification(
-						includedSegments: [],
-						appID: "",
-						title: Contents(en: title),
-						text: Contents(en: message),
-						urlDeeplink: url
+					SendNotificationButton(
+						title: $title,
+						message: $message,
+						url: $url,
+						showAlert: $showAlertView
 					)
-				)
+				}
 			}
 			.navigationTitle("Envoi notification")
 		}
