@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SendNotificationButton: View {
 	@EnvironmentObject var notifVM: SendPushNotificationViewModel
-	
+	@EnvironmentObject var rulesVM: NotificationRulesViewModel
 
 	@Binding var title: String
 	@Binding var message: String
@@ -23,6 +23,7 @@ struct SendNotificationButton: View {
 		.alert("Envoyer la notification ?", isPresented: $showAlert) {
 			Button("Envoyer") {
 				notifVM.sendNotification(title, message, url)
+				rulesVM.resetStates(&title, &message, &url)
 			}
 			Button("Annuler", role: .cancel) { showAlert = false }
 
@@ -36,6 +37,7 @@ struct SendNotificationButton_Previews: PreviewProvider {
 	static var previews: some View {
 		SendNotificationButton(title: .constant("Titre de la notification"), message: .constant("Message long et précis sur ce que nous allons vous proposer"), url: .constant("https://bokitfinder.fr"), showAlert: .constant(false))
 			.environmentObject(SendPushNotificationViewModel())
+			.environmentObject(NotificationRulesViewModel())
 	}
 }
 
