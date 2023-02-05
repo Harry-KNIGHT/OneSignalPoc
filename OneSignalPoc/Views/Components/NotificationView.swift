@@ -17,20 +17,20 @@ struct NotificationView: View {
 				.cornerRadius(10)
 				.foregroundColor(.orange)
 
-			VStack(alignment: .leading, spacing: 10) {
+			VStack(alignment: .leading, spacing: 2) {
 				Text(notification.title.en)
-					.font(.title3)
-					.fontWeight(.medium)
+					.font(.headline)
 
 				Text(notification.text.en)
+					.font(.subheadline)
 					.multilineTextAlignment(.leading)
 			}
 			Spacer()
 		}
-		.padding(5)
+		.padding(10)
 		.background(.thinMaterial)
 		.cornerRadius(20)
-		.padding(.horizontal)
+
 		.shadow(radius: 2)
 
     }

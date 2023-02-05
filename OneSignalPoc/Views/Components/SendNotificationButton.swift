@@ -10,28 +10,40 @@ import SwiftUI
 struct SendNotificationButton: View {
 	@EnvironmentObject var notifVM: SendPushNotificationViewModel
 	
-	@Binding var title: String
-	@Binding var message: String
-	@Binding var url: String
+	let notification: Notification
+	@Binding var showAlert: Bool
     var body: some View {
-		Button(
-			action: {
-				notifVM.sendNotification(title, message, url)
-			},
-			label: {
-				Label("Send Notification", systemImage: "paperplane")
-					.font(.title)
-					.frame(maxWidth: .infinity)
-			}
-		)
+		Button(action: {
+			showAlert = true
+		}, label: {
+			Text("Envoyer la notification")
+				.font(.title3.bold())
+				.padding(10)
+				.frame(maxWidth: .infinity)
+		})
 		.buttonStyle(.borderedProminent)
-		.padding(.horizontal)
+		.alert("Envoyer la notification ?", isPresented: $showAlert) {
+			Button(action: {
+				self.notifVM.sendNotification(
+					notification.title.en,
+					notification.text.en,
+					notification.urlDeeplink)
+			}, label: {
+				Text("Envoyer")
+			})
+			Button(role: .cancel, action: {
+				showAlert = false
+			}, label: {
+				Text("Annuler")
+			})
+		}
+
     }
 }
 
 struct SendNotificationButton_Previews: PreviewProvider {
     static var previews: some View {
-		SendNotificationButton(title: .constant("title"), message: .constant("message"), url: .constant("url"))
+		SendNotificationButton(notification: .notification, showAlert: .constant(false))
 			.environmentObject(SendPushNotificationViewModel())
     }
 }
