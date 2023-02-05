@@ -15,6 +15,7 @@ struct OneSignalPocApp: App {
 	var body: some Scene {
 		WindowGroup {
 			ContentView()
+				.environmentObject(SendPushNotificationViewModel())
 		}
 	}
 }
@@ -30,10 +31,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 	   OneSignal.promptForPushNotifications(userResponse: { accepted in
 		 print("User accepted notification: \(accepted)")
 	   })
-
-	  // Set your customer userId
-	  // OneSignal.setExternalUserId("userId")
-
+		
 	   return true
 	}
 }
